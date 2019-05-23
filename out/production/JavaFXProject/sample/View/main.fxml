@@ -14,7 +14,7 @@
       <bottom>
         <HBox alignment="CENTER_RIGHT" prefHeight="43.0" prefWidth="600.0" spacing="20.0">
           <children>
-            <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="44.0" style="-fx-background-color: gray" text="Add" textAlignment="LEFT" />
+            <Button fx:id="btn_Add" onAction="#pressAdd" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="44.0" style="-fx-background-color: gray" text="Add" textAlignment="LEFT" />
             <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="44.0" style="-fx-background-color: gray" text="Update" textAlignment="LEFT" />
             <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="44.0" style="-fx-background-color: gray" text="Delete" textAlignment="LEFT" />
             <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="44.0" style="-fx-background-color: gray" text="Close" textAlignment="LEFT" onAction="#closeEvent" fx:id="close"/>
