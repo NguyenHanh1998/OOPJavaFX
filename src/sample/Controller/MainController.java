@@ -42,4 +42,16 @@ public class MainController implements Initializable {
         stage.setScene(function_scene);
         stage.show();
     }
+
+    @FXML
+    public void pressNewDict(ActionEvent event) throws IOException {
+        Stage stageNewDic = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        FXMLLoader loaderNewDic = new FXMLLoader();
+        loaderNewDic.setLocation(getClass().getResource("../View/new_dict.fxml"));
+        AnchorPane userview = (AnchorPane) loaderNewDic.load();
+        Scene function_scene = new Scene(userview);
+
+        stageNewDic.setScene(function_scene);
+        stageNewDic.show();
+    }
 }
