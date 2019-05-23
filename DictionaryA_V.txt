@@ -1,0 +1,6 @@
+﻿teacher == giáo viên.
+student == học sinh.
+smartphone == điện thoại thông minh.
+pen == bút bi.
+clothes == quần áo.
+engineer == kỹ sư.
