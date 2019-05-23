@@ -15,9 +15,9 @@
         <HBox alignment="CENTER_RIGHT" prefHeight="43.0" prefWidth="600.0" spacing="20.0">
           <children>
             <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="44.0" style="-fx-background-color: gray" text="Add" textAlignment="LEFT" />
-            <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="44.0" style="-fx-background-color: gray" text="Update" textAlignment="LEFT" />
-            <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="44.0" style="-fx-background-color: gray" text="Delete" textAlignment="LEFT" />
-            <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="44.0" style="-fx-background-color: gray" text="Close" textAlignment="LEFT" onAction="#closeEvent" fx:id="close"/>
+            <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="44.0" style="-fx-background-color: gray" text="Update" textAlignment="LEFT" onAction="#updateEvent" fx:id="updateButton" />
+            <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="44.0" style="-fx-background-color: gray" text="Delete" textAlignment="LEFT" onAction="#deleteEvent" fx:id="deleteButton"/>
+            <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="44.0" style="-fx-background-color: gray" text="Close" textAlignment="LEFT" onAction="#closeEvent" fx:id="closeButton"/>
           </children>
           <padding>
             <Insets right="40.0" />
@@ -27,9 +27,9 @@
       <center>
         <GridPane prefHeight="320.0" BorderPane.alignment="CENTER">
           <children>
-            <TextField blendMode="OVERLAY" prefWidth="442.0000999999975" style="-fx-background-color: gray" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-            <Button mnemonicParsing="false" prefWidth="67.0" style="-fx-background-color: gray&#10;" text="Search" GridPane.columnIndex="2" GridPane.rowIndex="0" />
-            <TextField prefHeight="319.0" prefWidth="495.0" style="-fx-background-color: gray" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField blendMode="OVERLAY" prefWidth="442.0000999999975" style="-fx-background-color: gray" GridPane.columnIndex="1" GridPane.rowIndex="0" fx:id="searchText" />
+            <Button mnemonicParsing="false" prefWidth="67.0" style="-fx-background-color: gray&#10;" text="Search" GridPane.columnIndex="2" GridPane.rowIndex="0" onAction="#searchEvent" fx:id="searchButton"/>
+            <TextField prefHeight="319.0" prefWidth="495.0" style="-fx-background-color: gray" GridPane.columnIndex="1" GridPane.rowIndex="1" fx:id="meanText"/>
             <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="43.0" prefWidth="77.0" text="New Dict" textAlignment="CENTER" textFill="#808080" GridPane.columnIndex="2" GridPane.rowIndex="1" />
           </children>
           <columnConstraints>
