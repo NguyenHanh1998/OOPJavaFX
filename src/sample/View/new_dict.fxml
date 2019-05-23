@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.NewDicController">
+   <children>
+      <AnchorPane layoutX="108.0" layoutY="49.0" prefHeight="302.0" prefWidth="379.0">
+         <children>
+            <Label layoutX="129.0" layoutY="71.0" prefHeight="32.0" prefWidth="121.0" text="Create your dictionary" />
+            <TextField layoutX="78.0" layoutY="147.0" prefHeight="32.0" prefWidth="267.0" promptText="enter your dictionary's name" />
+            <Button layoutX="145.0" layoutY="222.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Create" />
+            <Label layoutX="32.0" layoutY="150.0" prefHeight="17.0" prefWidth="38.0" text="Name" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
