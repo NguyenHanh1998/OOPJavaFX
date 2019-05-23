@@ -24,9 +24,15 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 public class MainController {
+
+    private Stage stage;
+
+    @FXML
+    Button btn_Custom_Dic;
 
     public void pressEVDic(ActionEvent event) {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -42,6 +48,13 @@ public class MainController {
     }
 
     public void pressVEDic(ActionEvent event){}
-    public void pressCustomDic(ActionEvent event){}
+    public void pressCustomDic()throws Exception{
+        stage = (Stage) btn_Custom_Dic.getScene().getWindow();
+        BorderPane root;
+        root = (BorderPane) FXMLLoader.load(getClass().getResource("functions.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        System.out.println("button custom clicked");
+    }
 
 }

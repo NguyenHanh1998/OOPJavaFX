@@ -1,14 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.MainController">
-   <children>
-      <ListView layoutX="104.0" layoutY="48.0" prefHeight="324.0" prefWidth="403.0" />
-      <Button fx:id="btn_EV_Dic" layoutX="211.0" layoutY="116.0" onAction="#pressEVDic" mnemonicParsing="false" prefHeight="25.0" prefWidth="165.0" text="EN - VI Dictionary" />
-      <Button fx:id="btn_VE_Dic" layoutX="210.0" layoutY="188.0" onAction="#pressVEDic" mnemonicParsing="false" prefHeight="25.0" prefWidth="165.0" text="VI - EN Dictionary" />
-      <Button fx:id="btn_Custom_Dic" layoutX="209.0" layoutY="262.0" onAction="#pressCustomDic" mnemonicParsing="false" prefHeight="25.0" prefWidth="165.0" text="+ Custom Dictionary" />
-   </children>
+<AnchorPane prefHeight="447.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.Controller.MainController">
+  <children>
+    <BorderPane blendMode="EXCLUSION" layoutX="0.0" layoutY="0.0" prefHeight="447.0" prefWidth="600.0">
+      <bottom>
+        <HBox alignment="CENTER_RIGHT" prefHeight="43.0" prefWidth="600.0" spacing="20.0">
+          <children>
+            <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="44.0" style="-fx-background-color: gray" text="Add" textAlignment="LEFT" />
+            <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="44.0" style="-fx-background-color: gray" text="Update" textAlignment="LEFT" />
+            <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="44.0" style="-fx-background-color: gray" text="Delete" textAlignment="LEFT" />
+            <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="44.0" style="-fx-background-color: gray" text="Close" textAlignment="LEFT" />
+          </children>
+          <padding>
+            <Insets right="40.0" />
+          </padding>
+        </HBox>
+      </bottom>
+      <center>
+        <GridPane prefHeight="320.0" BorderPane.alignment="CENTER">
+          <children>
+            <TextField blendMode="OVERLAY" prefWidth="442.0000999999975" style="-fx-background-color: gray" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <Button mnemonicParsing="false" prefWidth="67.0" style="-fx-background-color: gray&#10;" text="Search" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+            <TextField prefHeight="319.0" prefWidth="495.0" style="-fx-background-color: gray" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="43.0" prefWidth="77.0" text="New Dict" textAlignment="CENTER" textFill="#808080" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+          </children>
+          <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="545.0" minWidth="10.0" prefWidth="16.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="574.0" minWidth="10.0" prefWidth="507.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="299.0" minWidth="10.0" prefWidth="77.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints maxHeight="125.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="325.0" minHeight="10.0" prefHeight="323.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+        </GridPane>
+      </center>
+      <top>
+        <HBox prefHeight="30.0" prefWidth="600.0">
+          <children>
+            <MenuBar blendMode="EXCLUSION" disable="false" focusTraversable="false" mouseTransparent="false" opacity="0.68" prefHeight="30.0" prefWidth="600.0" style="-fx-background-color: gray&#10;&#10;&#10;">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="New Dictionary" />
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Update Word" />
+                    <MenuItem mnemonicParsing="false" text="Delete Word" />
+                    <MenuItem mnemonicParsing="false" text="Add Word" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+              <HBox.margin>
+                <Insets />
+              </HBox.margin>
+            </MenuBar>
+          </children>
+        </HBox>
+      </top>
+    </BorderPane>
+  </children>
 </AnchorPane>
