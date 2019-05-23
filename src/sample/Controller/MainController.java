@@ -11,9 +11,15 @@ import javafx.scene.control.TextField;
 import sample.Model.DatabaseManager;
 import sample.Model.Dictionary;
 import sample.Model.Word;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.io.IOException;
 
 public class MainController implements Initializable {
 
@@ -104,5 +110,27 @@ public class MainController implements Initializable {
 
     public void changeDictEvent(ActionEvent actionEvent) {
         this.dictionary = new Dictionary(this.dictionaryList.getValue());
+    }
+
+    @FXML
+    public void pressNewDict(ActionEvent event) throws IOException  {
+        Stage stageNewDic = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        showStage(stageNewDic, "../View/new_dict.fxml");
+    }
+
+    @FXML
+    public void pressAdd(ActionEvent event) throws IOException {
+        Stage stageAdd = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        showStage(stageAdd, "../View/add_word.fxml");
+    }
+
+    public void showStage(Stage stage, String fileName) throws IOException {
+        FXMLLoader loaderNewDic = new FXMLLoader();
+        loaderNewDic.setLocation(getClass().getResource(fileName));
+        AnchorPane userview = (AnchorPane) loaderNewDic.load();
+        Scene function_scene = new Scene(userview);
+
+        stage.setScene(function_scene);
+        stage.show();
     }
 }

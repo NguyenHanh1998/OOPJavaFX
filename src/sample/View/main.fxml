@@ -15,7 +15,7 @@
       <bottom>
         <HBox alignment="CENTER_RIGHT" prefHeight="43.0" prefWidth="600.0" spacing="20.0">
           <children>
-            <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="44.0" style="-fx-background-color: gray" text="Add" textAlignment="LEFT" />
+            <Button  fx:id="btn_Add" onAction="#pressAdd" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="44.0" style="-fx-background-color: gray" text="Add" textAlignment="LEFT" />
             <Button fx:id="updateButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#updateEvent" prefHeight="44.0" style="-fx-background-color: gray" text="Update" textAlignment="LEFT" />
             <Button fx:id="deleteButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#deleteEvent" prefHeight="44.0" style="-fx-background-color: gray" text="Delete" textAlignment="LEFT" />
             <Button fx:id="closeButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#closeEvent" prefHeight="44.0" style="-fx-background-color: gray" text="Close" textAlignment="LEFT" />
@@ -39,7 +39,7 @@
                     </FXCollections>
                   </items>
                 </ComboBox>
-                <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="43.0" prefWidth="77.0" text="New Dict" textAlignment="CENTER" textFill="GREY" />
+                <Button  fx:id="btn_NewDict" onAction="#pressNewDict"  alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="43.0" prefWidth="77.0" text="New Dict" textAlignment="CENTER" textFill="GREY" />
               </children>
             </VBox>
           </children>
