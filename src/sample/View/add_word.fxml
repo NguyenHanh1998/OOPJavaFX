@@ -12,7 +12,7 @@
          <children>
             <Label layoutX="14.0" layoutY="76.0" prefHeight="27.0" prefWidth="66.0" text="New word" />
             <TextField fx:id="txt_custom_word" layoutX="92.0" layoutY="76.0" prefHeight="33.0" prefWidth="293.0" />
-            <Label layoutX="9.0" layoutY="161.0" prefHeight="17.0" prefWidth="67.0" text="Content" />
+            <Label fx:id="txt_word_custom" layoutX="9.0" layoutY="161.0" prefHeight="17.0" prefWidth="67.0" text="Content" />
             <TextArea fx:id="txt_content_custom" layoutX="92.0" layoutY="129.0" prefHeight="98.0" prefWidth="293.0" />
             <Button fx:id="btn_Add_db" layoutX="194.0" layoutY="237.0" mnemonicParsing="false" onAction="#pressAddDB" prefHeight="25.0" prefWidth="89.0" text="Add" />
             <Label layoutX="169.0" layoutY="25.0" prefHeight="33.0" prefWidth="124.0" text="English - Vietnamese" />
