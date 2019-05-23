@@ -2,6 +2,7 @@ package sample.Controller;
 import javafx.event.ActionEvent;
 
 public class FunctionsController {
+
     public void pressSearch(ActionEvent event) {
 
     }

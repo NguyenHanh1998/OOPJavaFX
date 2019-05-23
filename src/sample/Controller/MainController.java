@@ -17,6 +17,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
@@ -28,20 +29,24 @@ import javafx.stage.Stage;
 
 public class MainController {
 
-    public void pressEVDic(ActionEvent event) {
+    @FXML
+    public void pressEVDic(ActionEvent event) throws IOException   {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("View/functions.fxml"));
-        try {
-            Parent userview = loader.load();
-            Scene scene = new Scene(userview, 800, 600);
-            stage.setScene(scene);
-        } catch (IOException e) {
-            System.out.println(e.getMessage());// phai load truoc moi duoc goi getController
-        }
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("../View/functions.fxml"));
+        AnchorPane userview = (AnchorPane) loader.load();
+        Scene function_scene = new Scene(userview);
+
+        stage.setScene(function_scene);
+        stage.show();
+       // phai load truoc moi duoc goi getController
+
         //SortViewController sortController =((SortViewController) loader.getController());
     }
 
-    public void pressVEDic(ActionEvent event){}
+    public void pressVEDic(ActionEvent event){
+
+    }
     public void pressCustomDic(ActionEvent event){}
 
 }
