@@ -27,7 +27,7 @@ interface IDatabaseManager {
 public class DatabaseManager implements IDatabaseManager {
 
     public Connection connect() {
-        String url = "jdbc:sqlite:dictionary.db";
+        String url = "jdbc:sqlite:C:/Users/dell/Desktop/New folder/OOPJavaFX/src/sample/Model/dictionary.db";
         Connection conn = null;
         try {
             conn = DriverManager.getConnection(url);
@@ -102,7 +102,7 @@ public class DatabaseManager implements IDatabaseManager {
             pstmt.setString(1, word);
             pstmt.setInt(2, id);
             ResultSet resultSet = pstmt.executeQuery();
-            returnWord = new Word(resultSet.getString(1), resultSet.getString(2));
+            returnWord = new Word(resultSet.getString(2), resultSet.getString(3));
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }

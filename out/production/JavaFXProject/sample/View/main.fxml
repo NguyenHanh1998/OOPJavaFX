@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.*?>
+<?import javafx.collections.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.control.Button?>
@@ -15,9 +16,9 @@
         <HBox alignment="CENTER_RIGHT" prefHeight="43.0" prefWidth="600.0" spacing="20.0">
           <children>
             <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="44.0" style="-fx-background-color: gray" text="Add" textAlignment="LEFT" />
-            <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="44.0" style="-fx-background-color: gray" text="Update" textAlignment="LEFT" />
-            <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="44.0" style="-fx-background-color: gray" text="Delete" textAlignment="LEFT" />
-            <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="44.0" style="-fx-background-color: gray" text="Close" textAlignment="LEFT" onAction="#closeEvent" fx:id="close"/>
+            <Button fx:id="updateButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#updateEvent" prefHeight="44.0" style="-fx-background-color: gray" text="Update" textAlignment="LEFT" />
+            <Button fx:id="deleteButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#deleteEvent" prefHeight="44.0" style="-fx-background-color: gray" text="Delete" textAlignment="LEFT" />
+            <Button fx:id="closeButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#closeEvent" prefHeight="44.0" style="-fx-background-color: gray" text="Close" textAlignment="LEFT" />
           </children>
           <padding>
             <Insets right="40.0" />
@@ -27,10 +28,20 @@
       <center>
         <GridPane prefHeight="320.0" BorderPane.alignment="CENTER">
           <children>
-            <TextField blendMode="OVERLAY" prefWidth="442.0000999999975" style="-fx-background-color: gray" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-            <Button mnemonicParsing="false" prefWidth="67.0" style="-fx-background-color: gray&#10;" text="Search" GridPane.columnIndex="2" GridPane.rowIndex="0" />
-            <TextField prefHeight="319.0" prefWidth="495.0" style="-fx-background-color: gray" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="43.0" prefWidth="77.0" text="New Dict" textAlignment="CENTER" textFill="#808080" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextField fx:id="searchText" blendMode="OVERLAY" prefWidth="442.0000999999975" style="-fx-background-color: gray" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <Button fx:id="searchButton" mnemonicParsing="false" onAction="#searchEvent" prefWidth="67.0" style="-fx-background-color: gray&#10;" text="Search" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+            <TextField fx:id="meanText" prefHeight="319.0" prefWidth="495.0" style="-fx-background-color: gray" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <VBox alignment="BASELINE_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+              <children>
+                <ComboBox fx:id="dictionaryList" onAction="#changeDictEvent">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                    </FXCollections>
+                  </items>
+                </ComboBox>
+                <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="43.0" prefWidth="77.0" text="New Dict" textAlignment="CENTER" textFill="GREY" />
+              </children>
+            </VBox>
           </children>
           <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="545.0" minWidth="10.0" prefWidth="16.0" />
