@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class Dictionary {
-    private int dictionaryId;
+    public int dictionaryId;
     private DatabaseManager dbm;
 
     // Constructor

@@ -4,18 +4,32 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.SepiaTone?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.AddWordController">
    <children>
     <AnchorPane layoutX="89.0" layoutY="71.0" minHeight="0.0" minWidth="0.0" prefHeight="276.0" prefWidth="436.0">
          <children>
             <Label layoutX="14.0" layoutY="76.0" prefHeight="27.0" prefWidth="66.0" text="New word" />
-            <TextField fx:id="txt_custom_word" layoutX="92.0" layoutY="76.0" prefHeight="33.0" prefWidth="293.0" />
-            <Label layoutX="9.0" layoutY="161.0" prefHeight="17.0" prefWidth="67.0" text="Content" />
-            <TextArea fx:id="txt_content_custom" layoutX="92.0" layoutY="129.0" prefHeight="98.0" prefWidth="293.0" />
-            <Button fx:id="btn_Add_db" layoutX="194.0" layoutY="237.0" mnemonicParsing="false" onAction="#pressAddDB" prefHeight="25.0" prefWidth="89.0" text="Add" />
-            <Label layoutX="169.0" layoutY="25.0" prefHeight="33.0" prefWidth="124.0" text="English - Vietnamese" />
+            <TextField fx:id="customWordText" layoutX="92.0" layoutY="76.0" prefHeight="33.0" prefWidth="293.0" promptText="New word" />
+            <Label layoutX="21.0" layoutY="161.0" prefHeight="17.0" prefWidth="55.0" text="Content" />
+            <TextArea fx:id="customMeanText" layoutX="92.0" layoutY="129.0" prefHeight="98.0" prefWidth="293.0" promptText="Meaning" />
+            <Button fx:id="addButton" blendMode="DARKEN" layoutX="194.0" layoutY="237.0" mnemonicParsing="false" onAction="#pressAddDB" prefHeight="25.0" prefWidth="89.0" text="Add" textFill="#363232">
+               <effect>
+                  <DropShadow color="#a89549" height="32.87" radius="29.275" spread="0.37" width="86.23" />
+               </effect></Button>
+            <Label layoutX="155.0" layoutY="25.0" prefHeight="33.0" prefWidth="178.0" text=" English - Vietnamese" textFill="#e4ad2d">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Button fx:id="backButton" onAction="#pressBack" layoutX="28.0" layoutY="29.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" opacity="0.52" text="Back" textOverrun="WORD_ELLIPSIS">
+               <effect>
+                  <SepiaTone />
+               </effect>
+            </Button>
          </children>
       </AnchorPane>
    </children>
